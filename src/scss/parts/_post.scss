@@ -118,6 +118,7 @@
 
 	&.open:after {
 		position: absolute;
+		top: 0.3em;
 		right: 0.15em;
 		content: "";
 		border-bottom: 4px solid $link-color;
@@ -135,6 +136,7 @@
 	position: relative;
 	background: #f9fafb;
 	overflow: hidden;
+	border-radius: 4px;
 }
 
 .comment {
