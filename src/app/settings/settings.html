@@ -1,1 +1,58 @@
-<p>this is the settings page.</p>
+<div class="page-wrap-narrow">
+	<h1>Settings</h1>
+	
+	<section class="account">
+		<h2>Account</h2>
+		<div class="account-avatar">
+			<img src="/img/settings-avatar.png" alt="Jessica Tuan">
+			<button class="btn-avatar-change">change</button>
+		</div>
+	
+		<div class="account-fields">
+			<p>
+				<input type="text" class="username">
+			</p>
+			<p>
+				<input type="text" class="email">
+			</p>
+			<p>
+				<input type="password" class="password">
+			</p>
+		</div>
+	</section><!-- /.account -->
+	
+	<hr>
+	
+	<section class="notifications">
+		<h2>Notifications</h2>
+		<ss-toggle></ss-toggle>
+		<div>
+			<div class="toggle on">
+				<div class="switch"></div>
+			</div>
+			<div>
+				email me when my posts are marked as favorites
+			</div>
+		</div>
+		<div>
+			<div class="toggle off">
+				<div class="switch"></div>
+			</div>
+			<div>
+				email me when I'm mentioned
+			</div>
+		</div>
+	</section><!-- /.notifications -->
+	
+	<hr>
+	
+	<section class="privacy">
+		<h2>Privacy</h2>
+	</section><!-- /.privacy -->
+	
+	<hr>
+	
+	<button class="btn-save">
+		Save Changes
+	</button>
+</div>

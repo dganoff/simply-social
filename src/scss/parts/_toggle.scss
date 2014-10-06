@@ -1,0 +1,31 @@
+.toggle {
+	width: 50px;
+	border-radius: 25px;
+	@extend .clearfix;
+	
+	&.on {
+		background-color: $accent-color;
+		border: 1px solid $accent-color;
+
+		.switch {
+			float: right;
+		}
+	}
+
+	&.off {
+		border: 1px solid #ccc;
+		background-color: #ccc;
+
+		.switch {
+			float: left;
+		}
+	}
+
+	.switch {
+		background: white;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		transition: 250ms all ease-in;
+	}
+}
