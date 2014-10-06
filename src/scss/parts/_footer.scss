@@ -1,0 +1,32 @@
+.footer-container {
+	border-top: 1px solid #ddd;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.footer-nav-list {
+	list-style: none;
+	display: inline-block;
+	margin: 20px 0 0 0;
+	padding: 0;
+	@extend .clearfix;
+
+	.nav-item {
+		float: left;
+		margin-right: 2em;
+		color: #999;
+		font-family: 'Proxima Nova Bold';
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 12px;
+
+		a:link, a:visited {
+			color: $accent-color;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
