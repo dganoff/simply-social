@@ -3,14 +3,28 @@
 }
 
 .post {
+	margin-bottom: 2em;
+}
+
+.post-container {
 	position: relative;
 	border: 1px solid #ddd;
 	border-radius: 4px;
-	margin-bottom: 2em;
 	@extend .clearfix;
 
-	&.media {
+	&.top {
+		border-bottom: none;
 		border-radius: 4px 4px 0 0;
+	}
+
+	&.bottom {
+		display: none;
+		border-top: none;
+		border-radius: 0 0 4px 4px;
+
+		.tile & {
+			display: block;
+		}
 	}
 
 	.avatar {
@@ -22,5 +36,122 @@
 
 .post-content {
 	position: relative;
-	margin-left: 5.5em;
+	margin-left: 5.25em;
+	margin-top: 1.5em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+}
+
+.post-title {
+	font-size: 1.15em;
+	color: #3f454d;
+	margin-bottom: 0.5em;
+}
+
+.post-body {
+	color: #70767f;
+	line-height: 1.45em;
+
+	a:link, a:visited {
+		color: $link-color;
+		text-decoration: none;
+
+		&:hover {
+			color: darken($link-color, 10);
+		}
+	}
+}
+
+.post-media {
+	img {
+		display: block;
+		border-radius: 0 0 4px 4px;
+
+		.view-tile & {
+			border-radius: 0px;
+		}
+	}
+}
+
+.post-menu {
+
+	&.top {
+		position: absolute;
+		right: 1em;
+		top: 0;
+	}
+
+	.post-menu-list {
+		@extend .clearfix;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			float: left;
+			margin: 0 0.5em;
+		}
+
+		.time {
+			color: $link-color;
+		}
+	}
+}
+
+.comments-toggle {
+	position: relative;
+	margin-top: 0.75em;
+	padding: 0.25em 1.5em 0.25em 0.25em;
+	font-size: 12px;
+	color: $link-color;
+
+	&.closed:after {
+		position: absolute;
+		top: 0.65em;
+		right: 0.15em;
+		content: "";
+		border-top: 4px solid $link-color;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		border-bottom: 4px solid transparent;
+	}
+
+	&.open:after {
+		position: absolute;
+		right: 0.15em;
+		content: "";
+		border-bottom: 4px solid $link-color;
+		border-top: 4px solid transparent;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+	}
+
+	&:hover {
+		color: black;
+	}
+}
+
+.comments-container {
+	position: relative;
+	background: #f9fafb;
+	overflow: hidden;
+}
+
+.comment {
+	border-bottom: 1px solid #eef0f2;
+
+	&:first-child {
+		border-top: 1px solid #eef0f2;
+	}
+}
+
+.reply-container {
+	padding: 1.5em;
+
+	.reply {
+		width: 100%;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		padding: 0.5em;
+	}
 }
