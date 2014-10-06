@@ -8,6 +8,9 @@
 			restrict: 'AE',
 			replace: true,
 			templateUrl: 'views/toggle.directive.html',
+			scope: {
+				
+			}
 			/* @ngInject */
 			controller: function($scope) {
 				// Assign bindable models:
