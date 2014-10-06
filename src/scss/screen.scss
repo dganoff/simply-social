@@ -1,0 +1,16 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// Reset
+@import "vendor/normalize";
+
+// Project Styles:
+@import "global/resets";
+@import "global/vars";
+@import "global/fonts";
+@import "global/utils";
+@import "global/layout";
+@import "pages/posts";
+@import "parts/header";
+@import "parts/footer";
+@import "parts/post";

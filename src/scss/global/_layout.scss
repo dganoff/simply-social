@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $body-font;
+	-webkit-font-smoothing: antialiased;
+}
+
+img {
+	max-width: 100%;
+}
+
+.page-wrap {
+	max-width: 1300px;
+	margin: 0 auto;
+
+	@extend .clearfix;
+}
+
+.page-wrap-narrow {
+	max-width: 570px;
+	margin: 0 auto;
+
+	@extend .clearfix;
+}
+
+.content-container {
+	padding-top: $header-height;
+}

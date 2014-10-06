@@ -70,7 +70,7 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     src : ['**/*.scss', '!**/_*.scss'],
-                    cwd : './scss',
+                    cwd : './src/scss',
                     dest : DIST + 'css',
                     ext : '.css',
                     expand : true
@@ -132,6 +132,13 @@ module.exports = function(grunt) {
             images: {
                 files: [SRC + 'img/*'],
                 tasks: ['copy:images'],
+                options: {
+                    livereload: true
+                }
+            },
+            fonts: {
+                files: [SRC + 'fonts/*'],
+                tasks: ['copy:fonts'],
                 options: {
                     livereload: true
                 }
@@ -248,6 +255,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'clean',
         'sass',
+        'postcss',
         'copy',
         'htmlhint',
         'jshint',

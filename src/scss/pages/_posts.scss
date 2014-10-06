@@ -1,0 +1,109 @@
+.hero-container {
+	background: url("/img/bg-hero.jpg") no-repeat top center;
+	overflow: hidden;
+	font-family: 'Proxima Nova Light' sans-serif;
+}
+
+.hero-new-msg-container {
+	background: rgba($accent-color, 0.7);
+	margin-top: 122px;
+	border-radius: 4px;
+	padding: 2.25em 2em 1.5em 2em;
+}
+
+.hero-msg-input {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 2em;
+	width: 100%;
+
+	&::placeholder {
+		color: white;
+		opacity: 0.5;
+	}
+}
+
+.hero-msg-menu {
+	margin-top: 2em;
+
+	@extend .clearfix;
+
+	.menu-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.menu-list-item {
+		float: left;
+		display: block;
+		margin-right: 2em;
+		color: white;
+		opacity: 0.5;
+
+		img {
+			margin-right: 0.25em;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+.hero-sub-nav {
+	margin-top: 100px;
+	@extend .clearfix;
+
+	.nav-list {
+		list-style: none;
+		float: left;
+		margin: 0;
+		padding: 0;
+		@extend .clearfix;
+	}
+
+	.nav-item {
+		float: left;
+
+		a:link, a:visited {
+			display: block;
+			opacity: 0.7;
+			padding: 1.25em 0.5em;
+			margin-right: 3em;
+			color: white;
+			border-bottom: 4px solid transparent;
+			text-transform: uppercase;
+			font-family: 'Promixa Nova Bold' sans-serif;
+			font-size: 13px;
+			text-decoration: none;
+			font-weight: bold;
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&.active {
+				opacity: 1;
+				border-bottom-color: $accent-color;
+			}
+		}
+	}
+
+	.views-list {
+		list-style: none;
+		float: right;
+		margin: 0;
+		padding: 0;
+		@extend .clearfix;
+	}
+
+	.view-item {
+		float: left;
+
+		button {
+			padding: 0.75em 0.5em;
+		}
+	}
+}

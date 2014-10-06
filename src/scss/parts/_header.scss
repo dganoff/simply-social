@@ -1,0 +1,108 @@
+.header-container {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	padding-top: 1em;
+	height: $header-height;
+	background-color: $header-bg;
+}
+
+.logo {
+	display: inline-block;
+}
+
+.header-menu {
+	float: right;
+
+	.nav-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.nav-list-item {
+		position: relative;
+		float: left;
+		display: block;
+		margin-left: 1em;
+
+		&.profile {
+			&:hover {
+				.profile-dropdown-menu {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.profile-avatar {
+	padding-right: 1em;
+	background: url("/img/icon-down-arrow.png") no-repeat right center;
+	cursor: pointer;
+
+}
+
+.profile-dropdown-menu {
+	display: none;
+	position: absolute;
+	left: -2em;
+	padding-top: 5px;
+
+	.menu-list {
+		position: relative;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		background-color: #f4f5f7;
+		border-radius: 3px;
+
+		&:after {
+			content: "";
+			position: absolute;
+			right: 21px;
+			top: -10px;
+			border-bottom: 5px solid #f4f5f7;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 5px solid transparent;
+			width: 0px;
+			height: 0px;
+		}
+	}
+
+	.menu-list-item {
+		border-bottom: 1px solid #dee1e5;
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		a:link, a:visited {
+			display: block;
+			padding: 0.5em 2em 0.5em 1em;
+			font-family: 'Proxima Nova Light' sans-serif;
+			font-size: 14px;
+			text-decoration: none;
+			color: #70767f;
+
+			&:hover {
+				color: black;
+			}
+		}
+	}
+}
+
+.header-search {
+	background: url("/img/icon-search.png") 95% center no-repeat transparent;
+	border: 1px solid #bec3cc;
+	border-radius: 4px;
+	padding: 5px 30px 5px 5px;
+	color: $accent-color;
+	opacity: 0.4;
+
+	&:hover, &:focus {
+		opacity: 1;
+		outline: none;
+	}
+}

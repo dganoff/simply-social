@@ -1,0 +1,26 @@
+.allposts-container {
+	margin-top: 3em;
+}
+
+.post {
+	position: relative;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin-bottom: 2em;
+	@extend .clearfix;
+
+	&.media {
+		border-radius: 4px 4px 0 0;
+	}
+
+	.avatar {
+		position: absolute;
+		top: 1.5em;
+		left: 1.5em;
+	}
+}
+
+.post-content {
+	position: relative;
+	margin-left: 5.5em;
+}
