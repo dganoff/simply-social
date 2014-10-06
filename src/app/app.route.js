@@ -21,6 +21,16 @@
 				controller: 'allPostsCtrl',
 				templateUrl: 'views/all-posts.html'
 			})
+			.state('posts.photos', {
+				url: '/all-posts',
+				controller: 'photoPostsCtrl',
+				templateUrl: 'views/photo-posts.html'
+			})
+			.state('posts.videos', {
+				url: '/all-posts',
+				controller: 'videoPostsCtrl',
+				templateUrl: 'views/video-posts.html'
+			})
 			// Settings section:
 			.state('settings', {
 				url: '/settings',
