@@ -1,16 +1,15 @@
 (function() {
 	angular
 		.module('ss')
-		.controller('headerCtrl', headerCtrl);
+		.controller('modalNewMsgCtrl', modalNewMsgCtrl);
 
 	/* @ngInject */
-	function headerCtrl($scope, $rootScope) {
+	function modalNewMsgCtrl($scope, $rootScope) {
 		/*jshint validthis: true */
         var vm = this;
 
 		// Assign all bindable models:
-		$rootScope.isNewMsgModalOpen = false;
-		$scope.openNewMsgModal = openNewMsgModal;
+		vm.closeModal = closeModal;
 
 		// Kicks off the controller:
 		activate();
@@ -23,8 +22,8 @@
 		function activate() {
 		}
 
-		function openNewMsgModal() {
-			$rootScope.isNewMsgModalOpen = true;
+		function closeModal() {
+			$rootScope.isNewMsgModalOpen = false;
 		}
 	}
 })();

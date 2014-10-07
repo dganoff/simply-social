@@ -12,3 +12,4 @@ Improvements
 	- Scoped functionality (ex: toggling comments)
 	- Handle text vs media posts
 - Use vector images or font icons for the icon system
+- Use smaller background image on the hero section for smaller screens
