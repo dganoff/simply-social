@@ -104,4 +104,17 @@
 		opacity: 1;
 		outline: none;
 	}
+
+	@media (max-width: 510px) {
+		display: none;
+	}
+}
+
+.open-search {
+	display: none;
+	padding: 5px;
+
+	@media (max-width: 510px) {
+		display: block;
+	}
 }
