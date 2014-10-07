@@ -6,7 +6,7 @@
 	/* @ngInject */
 	function configure($stateProvider, $urlRouterProvider) {
 		// For any unmatched url, redirect to /schedule
-		$urlRouterProvider.otherwise("/posts");
+		$urlRouterProvider.otherwise("/posts/all-posts");
 
 		// Setup the states:
 		$stateProvider
