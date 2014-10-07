@@ -1,4 +1,4 @@
-<div class="page-wrap-narrow">
+<div class="page-wrap-narrow settings">
 	<h1>Settings</h1>
 	
 	<section class="account">
@@ -25,29 +25,18 @@
 	
 	<section class="notifications">
 		<h2>Notifications</h2>
-		<ss-toggle></ss-toggle>
-		<div>
-			<div class="toggle on">
-				<div class="switch"></div>
-			</div>
-			<div>
-				email me when my posts are marked as favorites
-			</div>
-		</div>
-		<div>
-			<div class="toggle off">
-				<div class="switch"></div>
-			</div>
-			<div>
-				email me when I'm mentioned
-			</div>
-		</div>
+		<ss-toggle
+			ng-repeat="option in notifications"
+			label="option.label">
+		</ss-toggle>
 	</section><!-- /.notifications -->
 	
 	<hr>
 	
 	<section class="privacy">
 		<h2>Privacy</h2>
+		<!-- create radio group directive... -->
+		<!-- create checkbox directive(s)... -->
 	</section><!-- /.privacy -->
 	
 	<hr>

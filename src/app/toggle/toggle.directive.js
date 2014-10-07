@@ -9,8 +9,8 @@
 			replace: true,
 			templateUrl: 'views/toggle.directive.html',
 			scope: {
-				
-			}
+				label: '='
+			},
 			/* @ngInject */
 			controller: function($scope) {
 				// Assign bindable models:

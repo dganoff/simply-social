@@ -1,0 +1,52 @@
+.settings {
+	h2 {
+		text-transform: uppercase;
+		font-size: 12px;
+		color: #70767f;
+		margin: 0 0 2em 0;
+	}
+}
+
+.account {
+	position: relative;
+}
+
+.account-avatar {
+	float: left;
+
+	.btn-avatar-change {
+		display: block;
+		padding: 0.25em 0;
+		width: 100%;
+		border: 1px solid $link-color;
+		color: $link-color;
+		border-radius: 4px;
+		font-size: 12px;
+		font-family: 'Proxima Nova Light';
+	}
+}
+
+.account-fields {
+	margin-left: 130px;
+
+	input {
+		width: 100%;
+		border: 1px solid $link-color;
+		padding: 10px 10px 10px 35px;
+		border-radius: 4px;
+		font-size: 18px;
+		color: #70767f;
+
+		&.username {
+			background: url('../img/icon-user.png') no-repeat 10px center;
+		}
+
+		&.email {
+			background: url('../img/icon-email.png') no-repeat 10px center;
+		}
+
+		&.password {
+			background: url('../img/icon-password.png') no-repeat 10px center;
+		}
+	}
+}
