@@ -1,0 +1,11 @@
+.btn-save {
+	padding: 0.5em 1em;
+	background: $accent-color;
+	border-radius: 4px;
+	color: white;
+	font-family: 'Proxima Nova Bold';
+
+	&:hover {
+		background: darken($accent-color, 5);
+	}
+}

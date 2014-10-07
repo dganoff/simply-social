@@ -44,21 +44,33 @@
 				{
 					fieldType: "radio",
 					options: [
-						"allow anyone to tag me",
-						"only allow people I follow to tag me",
-						"don't allow anyone to tag me"
+						{
+							selected: false,
+							label: "allow anyone to tag me"
+						},
+						{
+							selected: false,
+							label: "only allow people I follow to tag me"
+						},
+						{
+							selected: false,
+							label: "don't allow anyone to tag me"
+						}
 					]
 				},
 				{
 					fieldType: "check",
+					selected: false,
 					label: "add a location to my posts"
 				},
 				{
 					fieldType: "check",
+					selected: false,
 					label: "let others find me by my email address"
 				},
 				{
 					fieldType: "check",
+					selected: false,
 					label: "tailor ads based on my information"
 				}
 			];

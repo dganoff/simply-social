@@ -26,7 +26,7 @@
 	<section class="notifications">
 		<h2>Notifications</h2>
 		<ss-toggle
-			ng-repeat="option in notifications"
+			ng-repeat="option in notificationOptions"
 			label="option.label">
 		</ss-toggle>
 	</section><!-- /.notifications -->
@@ -35,8 +35,24 @@
 	
 	<section class="privacy">
 		<h2>Privacy</h2>
-		<!-- create radio group directive... -->
-		<!-- create checkbox directive(s)... -->
+		<div ng-repeat="option in privacyOptions">
+			<!-- Radio Groups: (example of using a directive) -->
+			<ss-radio-group
+				ng-if="option.fieldType === 'radio'"
+				options="option.options"
+				>
+			</ss-radio-group>
+
+			<!-- Checkboxes: (example of not using a directive) -->
+			<div ng-if="option.fieldType === 'check'">
+				<div class="checkbox-item" ng-click="selectCheckbox(option)">
+					<div class="checkbox-toggle" ng-class="{on: option.selected}">
+						<div class="switch"></div>
+					</div>
+					<div class="checkbox-label">{{option.label}}</div>
+				</div>
+			</div>
+		</div>
 	</section><!-- /.privacy -->
 	
 	<hr>

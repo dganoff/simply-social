@@ -1,0 +1,8 @@
+<ul class="radio-group">
+	<li ng-repeat="option in options" class="radio-item" ng-click="switchToggle(option)" >
+		<div class="radio-toggle" ng-class="{on: option.selected}">
+			<div class="switch"></div>
+		</div>
+		<div class="radio-label">{{option.label}}</div>
+	</li>
+</ul>

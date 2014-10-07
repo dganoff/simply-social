@@ -1,0 +1,38 @@
+.checkbox-item {
+	@extend .clearfix;
+	margin-bottom: 1.5em;
+	cursor: pointer;
+	user-select: none;
+}
+
+.checkbox-toggle {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	user-select: none;
+
+	&.on {
+		.switch {
+			background-color: $accent-color;
+		}
+	}
+
+	.switch {
+		width: 20px;
+		height: 20px;
+		background-color: transparent;
+		border-radius: 50%;
+		border: 2px solid white;
+		transition: 250ms all ease;
+	}
+}
+
+.checkbox-label {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 1em;
+	color: $text-body-color;
+	user-select: none;
+}
