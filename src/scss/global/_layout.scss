@@ -19,15 +19,17 @@ hr {
 }
 
 .page-wrap {
-	max-width: 1300px;
+	max-width: 1320px;
 	margin: 0 auto;
+	padding: 0 10px;
 
 	@extend .clearfix;
 }
 
 .page-wrap-narrow {
-	max-width: 570px;
+	max-width: 590px;
 	margin: 0 auto;
+	padding: 0 10px;
 
 	@extend .clearfix;
 }

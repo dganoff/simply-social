@@ -47,4 +47,9 @@
 	vertical-align: middle;
 	color: $text-body-color;
 	user-select: none;
+
+	@media (max-width: $small-screen) {
+		margin-left: 10px;
+		width: 70%;
+	}
 }

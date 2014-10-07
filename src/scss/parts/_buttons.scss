@@ -8,4 +8,8 @@
 	&:hover {
 		background: darken($accent-color, 5);
 	}
+
+	@media (max-width: $small-screen) {
+		width: 100%;
+	}
 }

@@ -14,6 +14,11 @@
 .account-avatar {
 	float: left;
 
+	@media (max-width: $small-screen) {
+		float: none;
+		text-align: center;
+	}
+
 	.btn-avatar-change {
 		display: block;
 		padding: 0.25em 0;
@@ -28,11 +33,21 @@
 			color: darken($link-color, 20);
 			border: 1px solid darken($link-color, 20);
 		}
+
+		@media (max-width: $small-screen) {
+			width: auto;
+			margin: 0 auto;
+			padding: 5px 23px;
+		}
 	}
 }
 
 .account-fields {
 	margin-left: 130px;
+
+	@media (max-width: $small-screen) {
+		margin-left: 0;
+	}
 
 	input {
 		width: 100%;
