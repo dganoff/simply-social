@@ -1,0 +1,55 @@
+<section class="post">
+	<div class="post-container">
+		<div class="avatar">
+			<img src="/img/avatar-sam.png">
+		</div>
+		
+		<div class="post-content">
+			<div class="post-title">
+				Sam Soffes
+			</div>
+		
+			<div class="post-body">
+				How to Get Inspired: the Right Way - Designmodo <a href="">bit.ly/1lE4uJc</a> Good stuff from <a href="">@designmodo</a>!
+			</div>
+			
+			<button ng-click="toggleComments()" class="comments-toggle" ng-class="{open: isCommentsOpen, closed: !isCommentsOpen}">
+				<span ng-hide="isCommentsOpen">Expand</span>
+				<span ng-show="isCommentsOpen">Collapse</span>
+			</button>
+		
+			<menu class="post-menu top">
+				<ul class="post-menu-list">
+					<li class="reply">
+						<button><img src="/img/icon-reply.png"></button>
+					</li>
+					<li class="like">
+						<button><img src="/img/icon-favorite.png"></button>
+					</li>
+					<li class="time">
+						3m
+					</li>
+				</ul>
+			</menu>
+		</div><!-- /.post-content -->
+
+		<div class="comments-container" ng-show="isCommentsOpen">
+			<section class="comment">
+				<div class="avatar">
+					<img src="/img/avatar-sam.png">
+				</div>
+				<div class="post-content">
+					<div class="post-title">
+						Jed Bridges
+					</div>
+					<div class="post-body">
+						Great way to start the week. Thanks for sharing!
+					</div>
+				</div><!-- /.comment-content -->
+			</section><!-- /.comment -->
+			<div class="reply-container">
+				<input type="text" class="reply" placeholder="Reply...">
+			</div><!-- /.comments-reply -->
+		</div><!-- /.comments-container -->
+	</div><!-- /.post-container -->
+</section>

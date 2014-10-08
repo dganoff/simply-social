@@ -1,0 +1,63 @@
+<div class="page-wrap-narrow settings">
+	<h1>Settings</h1>
+	
+	<section class="account">
+		<h2>Account</h2>
+		<div class="account-avatar">
+			<img src="/img/settings-avatar.png" alt="Jessica Tuan">
+			<button class="btn-avatar-change">change</button>
+		</div>
+	
+		<div class="account-fields">
+			<p>
+				<input type="text" class="username">
+			</p>
+			<p>
+				<input type="text" class="email">
+			</p>
+			<p>
+				<input type="password" class="password">
+			</p>
+		</div>
+	</section><!-- /.account -->
+	
+	<hr>
+	
+	<section class="notifications">
+		<h2>Notifications</h2>
+		<ss-toggle
+			ng-repeat="option in notificationOptions"
+			label="option.label">
+		</ss-toggle>
+	</section><!-- /.notifications -->
+	
+	<hr>
+	
+	<section class="privacy">
+		<h2>Privacy</h2>
+		<div ng-repeat="option in privacyOptions">
+			<!-- Radio Groups: (example of using a directive) -->
+			<ss-radio-group
+				ng-if="option.fieldType === 'radio'"
+				options="option.options"
+				>
+			</ss-radio-group>
+
+			<!-- Checkboxes: (example of not using a directive) -->
+			<div ng-if="option.fieldType === 'check'">
+				<div class="checkbox-item" ng-click="selectCheckbox(option)">
+					<div class="checkbox-toggle" ng-class="{on: option.selected}">
+						<div class="switch"></div>
+					</div>
+					<div class="checkbox-label">{{option.label}}</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- /.privacy -->
+	
+	<hr>
+	
+	<button class="btn-save">
+		Save Changes
+	</button>
+</div>

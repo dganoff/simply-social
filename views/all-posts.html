@@ -1,0 +1,24 @@
+<div class="allposts-container" ng-class="viewStyle">
+	<div class="page-wrap-narrow">
+		<ul class="views-menu">
+			<li class="view-item" ng-class="{active: (viewStyle === 'list')}">
+				<button ui-sref="posts.allposts({viewStyle: 'list'})">
+					<img src="/img/icon-list-view.png" alt="">
+				</button>
+			</li>
+			<li class="view-item" ng-class="{active: (viewStyle === 'tile')}">
+				<button ui-sref="posts.allposts({viewStyle: 'tile'})">
+					<img src="/img/icon-tile-view.png" alt="">
+				</button>
+			</li>
+		</ul>
+	</div>
+
+	<div ng-if="viewStyle === 'list'" class="page-wrap-narrow">
+		<div ng-include="'views/list-posts.html'"></div>
+	</div>
+
+	<div ng-if="viewStyle === 'tile'" class="page-wrap">
+		<div ng-include="'views/tile-posts.html'"></div>
+	</div>
+</div>

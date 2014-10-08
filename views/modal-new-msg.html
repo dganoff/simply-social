@@ -1,0 +1,28 @@
+<div class="modal-backdrop" ng-controller="modalNewMsgCtrl as vm">
+	<div class="modal-content">
+		<div class="modal-title">Create new message</div>
+		
+		<textarea id="new-msg-modal-input" class="modal-input"></textarea>
+
+		<ui class="modal-menu">
+			<li class="menu-item">
+				<button>
+					<img src="/img/icon-camera.png">
+					Add Photo
+				</button>
+			</li>
+			<li class="menu-item">
+				<button>
+					<img src="/img/icon-video.png">
+					Add Video
+				</button>
+			</li>
+			<li class="menu-item post-msg">
+				<button class="modal-post-btn">Post</button>
+			</li>
+		</ui>
+
+
+		<button class="modal-close-btn" ng-click="vm.closeModal()">x</button>
+	</div><!-- /.modal-container -->
+</div><!-- /.modal-backdrop -->
