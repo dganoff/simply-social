@@ -244,7 +244,14 @@ module.exports = function(grunt) {
             build: {
                 src: [DIST + "**"]
             }
-        }
+        },
+
+        'gh-pages': {
+            options: {
+                base: 'dist'
+            },
+            src: ['**']
+        },
     });
 
     // Load all Grunt tasks via matchdep:
@@ -262,4 +269,5 @@ module.exports = function(grunt) {
         'ngAnnotate',
         'concat:vendor'
     ]);
+    grunt.registerTask('pages', ['build', 'gh-pages']);
 };
