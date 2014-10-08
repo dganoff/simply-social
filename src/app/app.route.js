@@ -17,17 +17,17 @@
 				templateUrl: 'views/posts.html'
 			})
 			.state('posts.allposts', {
-				url: '/all-posts',
+				url: '/all-posts/:viewStyle',
 				controller: 'allPostsCtrl',
 				templateUrl: 'views/all-posts.html'
 			})
 			.state('posts.photos', {
-				url: '/all-posts',
+				url: '/photo-posts',
 				controller: 'photoPostsCtrl',
 				templateUrl: 'views/photo-posts.html'
 			})
 			.state('posts.videos', {
-				url: '/all-posts',
+				url: '/video-posts',
 				controller: 'videoPostsCtrl',
 				templateUrl: 'views/video-posts.html'
 			})

@@ -1,147 +1,24 @@
-<div class="allposts-container page-wrap-narrow">
-	<section class="post">
-		<div class="post-container">
-			<div class="avatar">
-				<img src="/img/avatar-sam.png">
-			</div>
-			
-			<div class="post-content">
-				<div class="post-title">
-					Sam Soffes
-				</div>
-			
-				<div class="post-body">
-					How to Get Inspired: the Right Way - Designmodo <a href="">bit.ly/1lE4uJc</a> Good stuff from <a href="">@designmodo</a>!
-				</div>
-				
-				<button ng-click="toggleComments()" class="comments-toggle" ng-class="{open: isCommentsOpen, closed: !isCommentsOpen}">
-					<span ng-hide="isCommentsOpen">Expand</span>
-					<span ng-show="isCommentsOpen">Collapse</span>
+<div class="allposts-container" ng-class="viewStyle">
+	<div class="page-wrap-narrow">
+		<ul class="views-menu">
+			<li class="view-item" ng-class="{active: (viewStyle === 'list')}">
+				<button ui-sref="posts.allposts({viewStyle: 'list'})">
+					<img src="/img/icon-list-view.png" alt="">
 				</button>
-			
-				<menu class="post-menu top">
-					<ul class="post-menu-list">
-						<li class="reply">
-							<button><img src="/img/icon-reply.png"></button>
-						</li>
-						<li class="like">
-							<button><img src="/img/icon-favorite.png"></button>
-						</li>
-						<li class="time">
-							3m
-						</li>
-					</ul>
-				</menu>
-			</div><!-- /.post-content -->
+			</li>
+			<li class="view-item" ng-class="{active: (viewStyle === 'tile')}">
+				<button ui-sref="posts.allposts({viewStyle: 'tile'})">
+					<img src="/img/icon-tile-view.png" alt="">
+				</button>
+			</li>
+		</ul>
+	</div>
 
-			<div class="comments-container" ng-show="isCommentsOpen">
-				<section class="comment">
-					<div class="avatar">
-						<img src="/img/avatar-sam.png">
-					</div>
-					<div class="post-content">
-						<div class="post-title">
-							Jed Bridges
-						</div>
-						<div class="post-body">
-							Great way to start the week. Thanks for sharing!
-						</div>
-					</div><!-- /.comment-content -->
-				</section><!-- /.comment -->
-				<div class="reply-container">
-					<input type="text" class="reply" placeholder="Reply...">
-				</div><!-- /.comments-reply -->
-			</div><!-- /.comments-container -->
-		</div><!-- /.post-container -->
-	</section>
+	<div ng-if="viewStyle === 'list'" class="page-wrap-narrow">
+		<div ng-include="'views/list-posts.html'"></div>
+	</div>
 
-	<section class="post">
-		<div class="post-container top">
-			<div class="avatar">
-				<img src="/img/avatar-meg.png">
-			</div>
-			
-			<div class="post-content">
-				<div class="post-title">
-					Meg Robichaud
-				</div>
-			
-				<div class="post-body">
-					My view this morning is simply beautful... <a href="">instagram.com/p/asdf</a>
-				</div>
-			
-				<!-- <menu class="post-menu top">
-					<ul class="post-menu-list">
-						<li class="reply">
-							<button><img src="/img/icon-reply.png"></button>
-						</li>
-						<li class="like">
-							<button><img src="/img/icon-favorite.png"></button>
-						</li>
-						<li class="time">
-							25m
-						</li>
-					</ul>
-				</menu> -->
-			</div><!-- ./post-content -->
-		</div><!-- /.post-container-top -->
-		
-		<div class="post-media">
-			<img src="/img/post-picture-meg.png">
-		</div><!-- ./post-media -->
-
-		<div class="post-container bottom">
-			<div class="post-menu bottom">
-				<ul class="post-menu-list">
-					<li class="reply">
-						<button><img src="/img/icon-reply.png"></button>
-					</li>
-					<li class="like">
-						<button><img src="/img/icon-favorite.png"></button>
-					</li>
-					<li class="time">
-						3m
-					</li>
-				</ul>
-			</div><!-- /.post-menu bottom -->
-		</div><!-- /.post-container-bottom -->
-	</section>
-
-	<section class="post">
-		<div class="post-container top">
-			<div class="avatar">
-				<img src="/img/avatar-vitor.png">
-			</div>
-			
-			<div class="post-content">
-				<div class="post-title">
-					Vitor Leal
-				</div>
-			
-				<div class="post-body">
-					You have to see this bike. It will make your daily commute a absolute joy ride! <a href="#">vimeo.com/p/m23u90Q/</a>
-				</div>
-			</div><!-- ./post-content -->
-		</div><!-- /.post-container-top -->
-		
-		<div class="post-media">
-			<img src="/img/post-video-vitor.png">
-		</div><!-- ./post-media -->
-
-		<div class="post-container bottom">
-			<div class="post-menu bottom">
-				<ul class="post-menu-list">
-					<li class="reply">
-						<button><img src="/img/icon-reply.png"></button>
-					</li>
-					<li class="like">
-						<button><img src="/img/icon-favorite.png"></button>
-					</li>
-					<li class="time">
-						3m
-					</li>
-				</ul>
-			</div><!-- /.post-menu bottom -->
-		</div><!-- /.post-container-bottom -->
-	</section>
+	<div ng-if="viewStyle === 'tile'" class="page-wrap">
+		<div ng-include="'views/tile-posts.html'"></div>
+	</div>
 </div>

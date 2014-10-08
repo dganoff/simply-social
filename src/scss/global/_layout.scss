@@ -19,6 +19,7 @@ hr {
 }
 
 .page-wrap {
+	position: relative;
 	max-width: 1320px;
 	margin: 0 auto;
 	padding: 0 10px;
@@ -27,6 +28,7 @@ hr {
 }
 
 .page-wrap-narrow {
+	position: relative;
 	max-width: 590px;
 	margin: 0 auto;
 	padding: 0 10px;
