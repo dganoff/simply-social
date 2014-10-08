@@ -19,11 +19,19 @@
 
 				//////////
 				
+				/**
+				 * Toggle the radio option and deselect other radio options
+				 * @param  {object} option The radio option
+				 * @param {boolean} option.selected
+				 */
 				function switchToggle(option) {
 					resetSelections();
 					option.selected = !option.selected;
 				}
 
+				/**
+				 * Clear the radio group selections
+				 */
 				function resetSelections() {
 					_.each($scope.options, function(option) {
 						option.selected = false;

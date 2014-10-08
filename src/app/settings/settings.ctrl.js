@@ -43,6 +43,11 @@
 				});
 		}
 
+		/**
+		 * Toggle the selection of a our custom check box
+		 * @param  {object} option The checkbox option item
+		 * @param {boolean} option.selected true|false based on if the checkbox is selected
+		 */
 		function selectCheckbox(option) {
 			option.selected = !option.selected;
 		}

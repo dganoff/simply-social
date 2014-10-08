@@ -14,6 +14,10 @@
 
 		//////////
 
+		/**
+		 * Get the list of Notification options for the Settings page
+		 * @return {promise}
+		 */
 		function getNotificationOptions() {
 			var deferred = $q.defer();
 
@@ -37,6 +41,10 @@
 			return deferred.promise;
 		}
 
+		/**
+		 * Get the list of Privacy options for the Settings page
+		 * @return {[type]}
+		 */
 		function getPrivacyOptions() {
 			var deferred = $q.defer();
 

@@ -22,6 +22,9 @@
 		function activate() {
 		}
 
+		/**
+		 * Close the modal window
+		 */
 		function closeModal() {
 			$rootScope.isNewMsgModalOpen = false;
 		}

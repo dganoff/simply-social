@@ -22,6 +22,10 @@
 		function activate() {
 		}
 
+		/**
+		 * Show/hide the comments for the text post
+		 * (this is scoped for all text posts, but should be scoped for each post)
+		 */
 		function toggleComments() {
 			$scope.isCommentsOpen = !$scope.isCommentsOpen;
 		}

@@ -19,6 +19,9 @@
 
 				//////////
 				
+				/**
+				 * Toggle the switch on/off
+				 */
 				function switchToggle() {
 					$scope.isToggleOn = !$scope.isToggleOn;
 				}

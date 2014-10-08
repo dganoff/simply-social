@@ -23,6 +23,9 @@
 		function activate() {
 		}
 
+		/**
+		 * Open the New Message Modal window that is on the root scope
+		 */
 		function openNewMsgModal() {
 			$rootScope.isNewMsgModalOpen = true;
 
