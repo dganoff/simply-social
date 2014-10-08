@@ -36,4 +36,8 @@ hr {
 
 .content-container {
 	padding-top: $header-height;
+
+	&.blur {
+		filter: blur(10px);
+	}
 }

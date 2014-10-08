@@ -15,12 +15,12 @@
 	<header ng-include="'views/header.html'" class="header-container"></header>
 	
 	<!-- App Page Container: -->
-	<div ui-view class="content-container"></div>
+	<div ui-view class="content-container" ng-class="{blur: isNewMsgModalOpen}"></div>
 
 	<!-- Global Footer: -->
 	<footer ng-include="'views/footer.html'"></footer>
 
-	<div ng-include="'views/modal-new-msg.html'" ng-show="isNewMsgModalOpen"></div>
+	<div ng-include="'views/modal-new-msg.html'" class="modal-container" ng-class="{open: isNewMsgModalOpen}"></div>
 
 	<script src="js/vendor.js"></script>
 	<script src="js/app.min.js"></script>

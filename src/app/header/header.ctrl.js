@@ -25,6 +25,11 @@
 
 		function openNewMsgModal() {
 			$rootScope.isNewMsgModalOpen = true;
+
+			// Focus the input field:
+			setTimeout(function() {
+				document.getElementById("new-msg-modal-input").focus();
+			}, 250);
 		}
 	}
 })();
