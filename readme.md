@@ -1,7 +1,7 @@
 AngularJS Example Web App
 ===
 
-[Demo page](http://dganoff.github.io/simply-social)
+[Live Demo](http://dganoff.github.io/simply-social)
 
 How to run this application
 ---
