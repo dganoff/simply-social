@@ -1,11 +1,15 @@
 AngularJS Example Web App
 ===
 
+[Demo page](http://dganoff.github.io/simply-social)
+
 How to run this application
 ---
 ### Requirements:
 1. Node JS (npm)
 - GruntJS
+- Ruby
+	- Sass gem
 
 ### Build/Run:
 1. cd to project root directory
