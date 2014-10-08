@@ -19,4 +19,7 @@ Improvements
 	- Scoped functionality (ex: toggling comments)
 	- Handle text vs media posts
 - Use vector images or font icons for the icon system
+- Condense non-icon images into a sprite where needed to reduce HTTP requests
 - Use smaller background image on the hero section for smaller screens
+- Use ngTemplateCache to cache the partial views
+- Add placeholder/label for 'All Posts' hero input field for IE 9
