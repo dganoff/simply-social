@@ -1,10 +1,17 @@
-AngularJS Example web app
+AngularJS Example Web App
 ===
 
 How to run this application
 ---
-Requirements:
-1. 
+### Requirements:
+1. Node JS (npm)
+- GruntJS
+
+### Build/Run:
+1. cd to project root directory
+- run `npm install` to install npm dependencies
+- run `grunt build` to build the `dist` folder
+- run `grunt` to start the web server at `localhost:7777`
 
 Improvements
 ---
