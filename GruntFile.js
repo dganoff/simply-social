@@ -67,7 +67,7 @@ module.exports = function(grunt) {
         },
 
         sass: {
-            dist: {
+            dev: {
                 files: [{
                     src : ['**/*.scss', '!**/_*.scss'],
                     cwd : './src/scss',
@@ -77,6 +77,18 @@ module.exports = function(grunt) {
                 }],
                 options: {
                     style: 'expanded'
+                }
+            },
+            prod: {
+                files: [{
+                    src : ['**/*.scss', '!**/_*.scss'],
+                    cwd : './src/scss',
+                    dest : DIST + 'css',
+                    ext : '.css',
+                    expand : true
+                }],
+                options: {
+                    style: 'compressed'
                 }
             }
         },
@@ -98,7 +110,7 @@ module.exports = function(grunt) {
             },
             scss: {
                 files: [SRC + 'scss/**/*.scss'],
-                tasks: ['sass', 'postcss']
+                tasks: ['sass:dev', 'postcss']
             },
             css: {
                 files: DIST + 'css/*.css',
@@ -261,7 +273,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['connect', 'watch']);
     grunt.registerTask('build', [
         'clean',
-        'sass',
+        'sass:dev',
         'postcss',
         'copy',
         'htmlhint',
@@ -269,5 +281,16 @@ module.exports = function(grunt) {
         'ngAnnotate',
         'concat:vendor'
     ]);
-    grunt.registerTask('pages', ['build', 'gh-pages']);
+    grunt.registerTask('build-prod', [
+        'clean',
+        'sass:prod',
+        'postcss',
+        'copy',
+        'htmlhint',
+        'jshint',
+        'ngAnnotate',
+        'uglify',
+        'concat:vendor'
+    ]);
+    grunt.registerTask('pages', ['build-prod', 'gh-pages']);
 };
